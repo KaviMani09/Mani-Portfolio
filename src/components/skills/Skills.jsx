@@ -72,7 +72,7 @@ const Skills = ({ darkMode }) => {
             </div>
           </div>
 
-          {/* Right box */}/
+          {/* Right box */}
           <SkillIcons icons={skillIcons} />
         </div>
       </div>
