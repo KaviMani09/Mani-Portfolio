@@ -165,7 +165,7 @@ html {
   border-radius: 50%;
   transform-origin: center;
   transform-style: preserve-3d;
-  transform: rotateY(calc(var(--i) * calc(360deg / 13))) translateZ(300px);
+  transform: rotateY(calc(var(--i) * calc(360deg / 14))) translateZ(300px);
 }
 
 .circle span img {
@@ -195,7 +195,7 @@ html {
     border-radius: 50%;
     transform-origin: center;
     transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i) * calc(360deg / 13))) translateZ(200px);
+    transform: rotateY(calc(var(--i) * calc(360deg / 14))) translateZ(200px);
   }
 
   .body-part-2 {
@@ -258,7 +258,7 @@ html {
     border-radius: 50%;
     transform-origin: center;
     transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i) * calc(360deg / 13))) translateZ(150px);
+    transform: rotateY(calc(var(--i) * calc(360deg / 14))) translateZ(150px);
   }
 
   .body-part-2 {
