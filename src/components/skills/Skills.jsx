@@ -1,15 +1,30 @@
 import React from "react";
-import ProgressBar from "../../chip/ProgressBar"; 
-import SkillBox from "../../chip/SkillBox"; 
+import ProgressBar from "../../chip/ProgressBar";
+import SkillBox from "../../chip/SkillBox";
 import { IoLogoHtml5, IoLogoCss3, IoLogoNodejs } from "react-icons/io";
-import { SiBootstrap, SiGithub, SiMysql, SiPhp, SiVisualstudiocode, SiJavascript, SiTailwindcss, SiMongodb, SiExpress, SiNextdotjs } from "react-icons/si";
+import {
+  SiBootstrap,
+  SiGithub,
+  SiMysql,
+  SiPhp,
+  SiVisualstudiocode,
+  SiJavascript,
+  SiTailwindcss,
+  SiMongodb,
+  SiExpress,
+  SiNextdotjs,
+} from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 
 const SkillIcons = ({ icons }) => (
   <div className="circle">
     {icons.map((src, index) => (
       <span key={index} style={{ "--i": index + 1 }}>
-        <img src={src} alt={`Skill icon for ${src.split('/').pop().split('.')[0]}`} height="75px" />
+        <img
+          src={src}
+          alt={`Skill icon for ${src.split("/").pop().split(".")[0]}`}
+          height="75px"
+        />
       </span>
     ))}
   </div>
@@ -17,19 +32,19 @@ const SkillIcons = ({ icons }) => (
 
 const Skills = ({ darkMode }) => {
   const skillIcons = [
-    "src/assets/asset/SVGIcons/html-5.svg",
-    "src/assets/asset/SVGIcons/css3.svg",
-    "src/assets/asset/SVGIcons/javascript.svg",
-    "src/assets/asset/SVGIcons/php.png",
-    "src/assets/asset/SVGIcons/MySQL.png",
-    "src/assets/asset/SVGIcons/React.svg",
-    "src/assets/asset/SVGIcons/tailwind.png",
-    "src/assets/asset/SVGIcons/Bootstrap.svg",
-    "src/assets/asset/SVGIcons/Github-Dark.svg",
-    "src/assets/asset/SVGIcons/git.png",
-    "src/assets/asset/SVGIcons/XAMPP.webp",
-    "src/assets/asset/SVGIcons/vscode.png",
-    "src/assets/asset/SVGIcons/canva.png",
+    "https://i.postimg.cc/c1XN6VxR/html-5.png",
+    "https://i.postimg.cc/K8FLW4Vb/css3.png",
+    "https://i.postimg.cc/X7rDv17q/javascript.png",
+    "https://i.postimg.cc/pLyPV9WD/php.png",
+    "https://i.postimg.cc/K8yvfcxL/MySQL.png",
+    "https://i.postimg.cc/g013N4bS/React.png",
+    "https://i.postimg.cc/T132mMNZ/Bootstrap.png",
+    "https://i.postimg.cc/13BcwcdN/tailwind.png",
+    "https://i.postimg.cc/1tqRrryK/Github-Dark.png",
+    "https://i.postimg.cc/wxPHBqrJ/git.png",
+    "https://i.postimg.cc/52B2js68/vscode.png",
+    "https://i.postimg.cc/9f0KsM5z/XAMPP.webp",
+    "https://i.postimg.cc/zXDpLtzK/canva.png",
   ];
 
   return (
@@ -42,12 +57,10 @@ const Skills = ({ darkMode }) => {
           </h3>
           <span className="h-[1.1px] right-0 absolute w-[90%] bg-gray-300 block"></span>
         </div>
-         {/* Content */}
-         <div data-aos="fade-up" className="flex">
+        {/* Content */}
+        <div data-aos="fade-up" className="flex">
           <div className="left flex-1 w-full">
-            <p className="text-gray-700 font-medium">
-              Programming Language
-            </p>
+            <p className="text-gray-700 font-medium">Programming Language</p>
 
             {/* Left box */}
             <div className="body-part-2">
