@@ -45,7 +45,7 @@ const Skills = ({ darkMode }) => {
     "https://i.postimg.cc/52B2js68/vscode.png",
     "https://i.postimg.cc/9f0KsM5z/XAMPP.webp",
     "https://i.postimg.cc/zXDpLtzK/canva.png",
-    "https://i.postimg.cc/HxwmzfWs/netlify.png",
+    "https://i.postimg.cc/ZYGGV6ws/netlify.png",
   ];
 
   return (
