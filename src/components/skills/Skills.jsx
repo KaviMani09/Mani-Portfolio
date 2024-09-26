@@ -1,18 +1,16 @@
 import React from "react";
 import ProgressBar from "../../chip/ProgressBar";
 import SkillBox from "../../chip/SkillBox";
-import { IoLogoHtml5, IoLogoCss3, IoLogoNodejs } from "react-icons/io";
+import { IoLogoHtml5, IoLogoCss3, IoReactjs } from "react-icons/io";
 import {
-  SiBootstrap,
+ SiBootstrap,
   SiGithub,
   SiMysql,
   SiPhp,
   SiVisualstudiocode,
   SiJavascript,
   SiTailwindcss,
-  SiMongodb,
-  SiExpress,
-  SiNextdotjs,
+  SiNetlify,
 } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 
@@ -45,6 +43,7 @@ const Skills = ({ darkMode }) => {
     "https://i.postimg.cc/52B2js68/vscode.png",
     "https://i.postimg.cc/9f0KsM5z/XAMPP.webp",
     "https://i.postimg.cc/zXDpLtzK/canva.png",
+    "https://i.postimg.cc/HxwmzfWs/netlify.png",
   ];
 
   return (
