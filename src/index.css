@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  scrollbar-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+::selection {
+  color: white;
+  background: #000;
+}
+
+.image {
+  animation: animate 6s ease-in-out infinite;
+  transition: all 2s ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+/* Hero circular spin */
+.circle-text {
+  -webkit-animation: spin 12s linear infinite;
+  animation: spin 12s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.left-button {
+  position: absolute;
+  left: 450px;
+  margin-top: -300px;
+}
+
+.right-button {
+  position: absolute;
+  right: 10px;
+  margin-top: -300px;
+}
+
+.body-part-2 {
+  position: relative;
+}
+
+.background-circle {
+  background: #28292d;
+  border-radius: 50%;
+  width: 450px;
+  height: 450px;
+  margin-top: 10px;
+  z-index: 9;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.hoodie-guy {
+  position: absolute;
+  background: url(assets/asset/SVGIcons/hoodie-guy.png);
+  top: -30px;
+  left: -30px;
+  height: 480px;
+  width: 480px;
+  background-size: cover;
+}
+
+.circle {
+  position: relative;
+  top: 200px;
+  left: -250px;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  animation: animateCircle 40s linear infinite;
+}
+
+@keyframes animateCircle {
+  0% {
+    transform: perspective(1000px) rotateY(0deg) rotateX(15deg)
+      translateY(-30px);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateY(360deg) rotateX(15deg)
+      translateY(-30px);
+  }
+}
+
+.circle span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * calc(360deg / 13))) translateZ(300px);
+}
+
+.circle span img {
+  position: relative;
+  top: 12px;
+  left: 12px;
+  object-fit: cover;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 767px) {
+  .circle {
+    width: 70px;
+    height: 70px;
+    top: 50px;
+    left: -180px;
+  }
+}
+
+@media (max-width: 767px) {
+  .circle span {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * calc(360deg / 13))) translateZ(200px);
+  }
+
+  .body-part-2 {
+    position: relative;
+    left: -30px;
+    width: 100px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .background-circle {
+    background: #28292d;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    margin-left: 40px;
+    margin-top: 140px;
+    z-index: 9;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .hoodie-guy {
+    position: absolute;
+    background: url(assets/asset/SVGIcons/hoodie-guy.png);
+    top: -10px;
+    left: 30px;
+    height: 400px;
+    width: 400px;
+    background-size: cover;
+  }
+
+  @keyframes animateCircle {
+    0% {
+      transform: perspective(1000px) rotateY(0deg) rotateX(1deg)
+        translateY(-30px);
+    }
+
+    100% {
+      transform: perspective(1000px) rotateY(360deg) rotateX(1deg)
+        translateY(-30px);
+    }
+  }
+}
+
+@media (max-width: 412px) {
+  .circle {
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: -120px;
+  }
+
+  .circle span {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * calc(360deg / 13))) translateZ(150px);
+  }
+
+  .body-part-2 {
+    position: relative;
+    left: -30px;
+    width: 100px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 412px) {
+  .background-circle {
+    background: #28292d;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin-left: 30px;
+    margin-top: 140px;
+    z-index: 9;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .hoodie-guy {
+    position: absolute;
+    background: url(assets/asset/SVGIcons/hoodie-guy.png);
+    top: -10px;
+    left: 30px;
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+  }
+
+  @keyframes animateCircle {
+    0% {
+      transform: perspective(1000px) rotateY(0deg) rotateX(1deg)
+        translateY(-30px);
+    }
+
+    100% {
+      transform: perspective(1000px) rotateY(360deg) rotateX(1deg)
+        translateY(-30px);
+    }
+  }
+}
+
+
+@media (max-width: 412px) {
+.button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.left-button {
+  position: absolute;
+  left: 450px;
+  margin-top: -450px;
+}
+
+.right-button {
+  position: absolute;
+  right: 10px;
+  margin-top: -450px;
+}
+}
