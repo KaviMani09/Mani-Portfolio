@@ -19,8 +19,8 @@ const Footer = () => {
             href="https://www.linkedin.com/in/kavimanikandan09"
             className="box font-medium text-white  flex items-start justify-end gap-1"
           >
-            <FaLinkedinIn className=" text-white text-xl hover:scale-125 cursor-pointer" />
-            <p>Linkedin</p>
+            <AiOutlinePhone className=" text-white text-xl hover:scale-125 cursor-pointer" />
+            <p>Call Me</p>
           </a>
 
           <a
